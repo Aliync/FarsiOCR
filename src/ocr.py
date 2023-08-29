@@ -35,7 +35,7 @@ def main():
             img = process_image(fileAddress)
 
             # Recognize the text as string in image using pytesserct
-            config = ''
+            config = "--psm 6 --oem 3 -c preserve_interword_spaces=1"
             text = str(pytesseract.image_to_string(img, lang=langs, config=config))
 
             # Remove empty lines of text - s.strip() removes lines with spaces
