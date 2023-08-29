@@ -6,7 +6,7 @@ from pdf2image import convert_from_path
 
 from preprocess import process_image
 
-langs = "fas"  # Languages for OCR eng+fas
+langs = "fas+eng"  # Languages for OCR eng+fas
 dirname = os.path.dirname(os.path.dirname(__file__))
 input_dir = os.path.join(dirname, "data")  # Directory of pdf/image files
 output_dir = os.path.join(dirname, "output")  # Directory of ocr'ed images
